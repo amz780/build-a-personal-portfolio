@@ -7,19 +7,129 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     
     <title>Build a personale portfolio</title>
+        <!-------------------Start CSS----------------------------------->
+    <style>
+        :root{
+            --dark-grey: #202022;
+            --red: #be3144;
+            --white: #f0f0f0;
+            --purple: #be9fe4;
+            --blue:#45567d;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        *,
+        *::before,
+        *::after{
+            box-sizing: inherit;
+        }
+        html{
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+        body{
+            
+            min-height: 100vh;
+            background-color:var(--dark-grey);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        a{
+            text-decoration: none;
+            color:inherit;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-top: 10vh;
+        }
+        nav#navbar.nav{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: stretch;
+            background-color: var(--red);
+            padding-right: 2rem;
+            box-shadow: 0 2px black;
+        }
+        nav #nav-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 2rem;
+            width: 20%;
+        }
+
+       nav #nav-list li{
+            padding: 1rem;
+        }
+       nav #nav-list a{
+           display: block;
+
+            font-weight: bold;
+            font-size: 2.5rem;
+            color:var(--white);
+       } 
+        
+        nav #nav-list li:hover{
+            background-color: var(--blue);
+        }
+        
+        section#welcome-section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+        .welcome-section h1{
+            font-size: 10rem;
+            color: var(--white);
+            font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+        }
+        .welcome-section p{
+            font-family: 'Poppins', monospace;
+            font-size: 3rem;
+            color: var(--red);
+        }
+section#projects-section{
+    width: 100%;
+    background-color: var(--blue);
+
+}
+
+    </style>
+        <!-------------------End CSS----------------------------------->
 </head>
 <body>
-    
+<!-----------------------------Start Container-------------------------------->
+<div class="container">
     <nav id="navbar" class="nav">
       <ul id="nav-list">
         <li><a href="#Welcome-section">About</a></li>
         <li><a href="#Work">Work</a></li>
         <li><a href="#Contact">Contact</a></li>
        </ul>
-</nav>
-<section id="welcome-section class="welcome-section">
+     </nav>
+<!-----------------------------End Nav----------------------->     
+<section id="welcome-section" class="welcome-section">
     <h1>Hey I am Mimic</h1>
     <p>a web developer</p>
 </section>
@@ -97,7 +207,8 @@
     </p>
     <p>Created for <a href="https://www.freecodecamp.com/">freeCodeCamp<i class="fab fa-free-code-camp"></i></a></p>
 </footer>
-
 <!--------------------------End footer Section----------------------------------->
+</div>
+<!--------------------------End Container-------------------------------------->
 </body>
 </html>
