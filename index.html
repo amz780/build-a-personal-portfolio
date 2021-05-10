@@ -40,7 +40,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
         }
         a{
             text-decoration: none;
@@ -52,6 +52,7 @@
         .container{
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             width: 100%;
             padding-top: 10vh;
@@ -78,10 +79,11 @@
 
        nav #nav-list li{
             padding: 1rem;
+            height: 100%;
         }
        nav #nav-list a{
-           display: block;
-
+            padding-top: 15px;
+            display: inline-block;
             font-weight: bold;
             font-size: 2.5rem;
             color:var(--white);
@@ -96,7 +98,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 95vh;
+            height: 100vh;
         }
         .welcome-section h1{
             font-size: 10rem;
@@ -127,11 +129,34 @@ section#projects-section{
     border-bottom: 0.5rem solid white;
 }
 /* -------------------------Start Grid---------------------------------*/
-.project-grid{
-    grid-template-rows:  repeat(2, minmax(200px, 1fr));
-    grid-template-columns: 5rem repeat(3, minmax(20%, 1fr)) 5rem;
-    grid-gap: 2rem;
-    background-color: coral;
+div.project-grid{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin-bottom: 6rem;
+
+    
+}
+a .project-image{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    height: calc(100% - 10rem);
+    object-fit: cover;
+    margin: 0 0;
+}
+.project-grid p.project-title{
+    height: calc(100% / 8);
+    background-color: var(--dark-grey);
+    text-align: center;
+    font-family: 'Poppins', monospace;
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--white);
+    margin: 0 0;
 }
     </style>
         <!-------------------End CSS----------------------------------->
@@ -161,40 +186,40 @@ section#projects-section{
     <div class="project-grid">
         <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="" class="project-image">
-            <p class="project-tile"><span class="code">Tribute Page</span></p>
+            <p class="project-title"><span class="code">Tribute Page</span></p>
         </a>
     
     
-        <a href="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" class="project project-title"></a>
+        <a href="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png" alt="" class="project-image">
-            <p class="project-tile"><span class="code">Random Quote Machine</span></p>
+            <p class="project-title"><span class="code">Random Quote Machine</span></p>
         </a>
     
     
     
         <a href="https://codepen.io/freeCodeCamp/full/wgGVVX" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png" alt="" class="project-image">
-            <p class="project-tile"><span class="code">Javascript Calculator</span></p>
+            <p class="project-title"><span class="code">Javascript Calculator</span></p>
         </a>
     
 
     
         <a href="https://codepen.io/freeCodeCamp/full/mVEJag" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg" alt="" class="project-image">
-            <p class="project-tile"><span class="code">Map Data Across the Globe</span></p>
+            <p class="project-title"><span class="code">Map Data Across the Globe</span></p>
         </a>
     
 
     
         <a href="https://codepen.io/freeCodeCamp/full/wGqEga" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png" alt="" class="project-image">
-            <p class="project-tile"><span class="code">Wikipedia Viewer</span></p>
+            <p class="project-title"><span class="code">Wikipedia Viewer</span></p>
         </a>
     
 
         <a href="https://codepen.io/freeCodeCamp/full/KzXQgy" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png" alt="" class="project-image">
-            <p class="project-tile"><span class="code">Tic Tac Toe Game</span></p>
+            <p class="project-title"><span class="code">Tic Tac Toe Game</span></p>
         </a>
     </div>
     <!-----------End project grid-------------->    
