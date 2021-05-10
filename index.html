@@ -110,11 +110,29 @@
             color: var(--red);
         }
 section#projects-section{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: var(--blue);
-
 }
-
+ h2.project-section-header{
+    padding-top: 1rem;
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--white);
+    font-size: 6rem;
+    border-bottom: 0.5rem solid white;
+}
+/* -------------------------Start Grid---------------------------------*/
+.project-grid{
+    grid-template-rows:  repeat(2, minmax(200px, 1fr));
+    grid-template-columns: 5rem repeat(3, minmax(20%, 1fr)) 5rem;
+    grid-gap: 2rem;
+    background-color: coral;
+}
     </style>
         <!-------------------End CSS----------------------------------->
 </head>
@@ -145,37 +163,35 @@ section#projects-section{
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="" class="project-image">
             <p class="project-tile"><span class="code">Tribute Page</span></p>
         </a>
-    </div>
     
-    <div class="project-grid">
-        <a href="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" class="project project-title">
+    
+        <a href="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" class="project project-title"></a>
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png" alt="" class="project-image">
             <p class="project-tile"><span class="code">Random Quote Machine</span></p>
         </a>
-    </div>
     
-    <div class="project-grid">
+    
+    
         <a href="https://codepen.io/freeCodeCamp/full/wgGVVX" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png" alt="" class="project-image">
             <p class="project-tile"><span class="code">Javascript Calculator</span></p>
         </a>
-    </div>
+    
 
-    <div class="project-grid">
+    
         <a href="https://codepen.io/freeCodeCamp/full/mVEJag" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg" alt="" class="project-image">
             <p class="project-tile"><span class="code">Map Data Across the Globe</span></p>
         </a>
-    </div>
+    
 
-    <div class="project-grid">
+    
         <a href="https://codepen.io/freeCodeCamp/full/wGqEga" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png" alt="" class="project-image">
             <p class="project-tile"><span class="code">Wikipedia Viewer</span></p>
         </a>
-    </div>
+    
 
-    <div class="project-grid">
         <a href="https://codepen.io/freeCodeCamp/full/KzXQgy" class="project project-title">
             <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png" alt="" class="project-image">
             <p class="project-tile"><span class="code">Tic Tac Toe Game</span></p>
